@@ -1,0 +1,59 @@
+7.6 LAB*: Warm up: Online shopping cart (Part 1)
+(1) Create three files to submit:
+
+ItemToPurchase.h - Struct definition and related function declarations
+ItemToPurchase.c - Related function definitions
+main.c - main() function
+Build the ItemToPurchase struct with the following specifications:
+
+Data members (3 pts)
+char itemName [ ]
+int itemPrice
+int itemQuantity
+Related functions
+MakeItemBlank() (2 pts)
+Has a pointer to an ItemToPurchase parameter.
+Sets item's name = "none", item's price = 0, item's quantity = 0
+PrintItemCost()
+Has an ItemToPurchase parameter.
+
+Ex. of PrintItemCost() output:
+
+Bottled Water 10 @ $1 = $10
+
+
+(2) In main(), prompt the user for two items and create two objects of the ItemToPurchase struct. Before prompting for the second item, enter the following code to allow the user to input a new string. c is declared as a char. (2 pts)
+
+c = getchar();
+while(c != '\n' && c != EOF) {
+   c = getchar();
+}
+
+Ex:
+
+Item 1
+Enter the item name:
+Chocolate Chips
+Enter the item price:
+3
+Enter the item quantity:
+1
+
+Item 2
+Enter the item name:
+Bottled Water
+Enter the item price:
+1
+Enter the item quantity:
+10
+
+
+(3) Add the costs of the two items together and output the total cost. (2 pts)
+
+Ex:
+
+TOTAL COST
+Chocolate Chips 1 @ $3 = $3
+Bottled Water 10 @ $1 = $10
+
+Total: $13
